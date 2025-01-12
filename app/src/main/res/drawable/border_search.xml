@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Trạng thái bình thường -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Viền ngoài -->
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="2dp"
+                android:color="@android:color/darker_gray" />
+            <!-- Góc bo tròn -->
+            <corners android:radius="999dp" />
+        </shape>
+    </item>
+</selector>
