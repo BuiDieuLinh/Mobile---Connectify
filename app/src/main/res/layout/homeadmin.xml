@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/instagram"></ImageView>
+
+        <TextView
+            android:id="@+id/errTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:gravity="center_vertical"
+            android:text="Connectify"
+            android:textColor="@color/black"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
+
+        <Button
+            android:id="@+id/btnManageUser"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Quản lý người dùng"
+            android:background="@drawable/border_search"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"></Button>
+
+        <Button
+            android:id="@+id/btnManagePost"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Quản lý bài viết"
+            android:background="@drawable/border_search"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"></Button>
+
+        <Button
+            android:id="@+id/btnManageAd"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Quản lý quảng cáo"
+            android:background="@drawable/border_search"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"></Button>
+
+        <Button
+            android:id="@+id/btnManageSetting"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Cài đặt"
+            android:background="@drawable/border_search"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"></Button>
+
+        <Button
+            android:id="@+id/btnManageHelper"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Trợ giúp"
+            android:background="@drawable/border_search"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"></Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center_vertical"
+            android:text="create by three chill guy"
+            android:textColor="#888"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat"
+            android:layout_marginTop="100dp"/>
+    </LinearLayout>
+</LinearLayout>

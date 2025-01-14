@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frameTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Chỉnh sửa trang cá nhân"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Icon (đè lên) -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/arrow_left" />
+    </FrameLayout>
+
+    <!-- Đường kẻ ngang -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B0B0B0" />
+
+    <!-- Image cua nguoi dung ne-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <!-- Cai nay de hien thi hinh anh -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gradient">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="999dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/btdl" />
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+            <!-- Cai nay de hien thi hinh anh -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/border_gradient">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="2dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="999dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/btdl" />
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chỉnh sửa ảnh hoặc trang cá nhân"
+            android:gravity="center"
+            android:textColor="#1A78D1"
+            android:textStyle="bold"
+            android:paddingTop="10dp"></TextView>
+
+    </LinearLayout>
+
+    <!-- Đường kẻ ngang -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B0B0B0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Tên"></TextView>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Bùi Linh"></EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Tên người dùng"></TextView>
+
+        <EditText
+            android:id="@+id/etNameUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="_diuz.lih_"></EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Danh xưng"></TextView>
+
+        <EditText
+            android:id="@+id/etDanhXung"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Danh xưng"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Tiểu sử"></TextView>
+
+        <EditText
+            android:id="@+id/etBio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="100đ"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Liên kết"
+            android:layout_gravity="center"></TextView>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/etRelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Thêm liên kết"></EditText>
+            <ImageView
+                android:id="@+id/imgSwitchRelative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/angle_right"
+                android:layout_gravity="end|center_vertical"></ImageView>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Biểu ngữ"
+            android:layout_gravity="center"></TextView>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/etBieuNgu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Thêm biểu ngữ"></EditText>
+            <ImageView
+                android:id="@+id/imgSwitchBieuNgu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/angle_right"
+                android:layout_gravity="end|center_vertical"></ImageView>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Nhạc"
+            android:layout_gravity="center"></TextView>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/etMusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Thêm nhạc vào trang cá nhân"></EditText>
+            <ImageView
+                android:id="@+id/imgSwitchMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/angle_right"
+                android:layout_gravity="end|center_vertical"></ImageView>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Giới tính"
+            android:layout_gravity="center"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Giới tính"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:textSize="16dp"></TextView>
+        <ImageView
+            android:id="@+id/imgSwitchSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/angle_right"></ImageView>
+
+    </LinearLayout>
+    <!-- Đường kẻ ngang -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B0B0B0" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvChangeAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chuyển sang tài khoản công việc"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:textSize="16dp"
+            android:textColor="#1A78D1"
+            android:paddingBottom="10dp"></TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B0B0B0" />
+        <TextView
+            android:id="@+id/tvSettingInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cài đặt thông tin cá nhân"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:textSize="16dp"
+            android:textColor="#1A78D1"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"></TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B0B0B0" />
+        <TextView
+            android:id="@+id/tvShowProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Khoe trang cá nhân đã xác minh"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:textSize="16dp"
+            android:textColor="#1A78D1"
+            android:paddingTop="10dp"></TextView>
+    </LinearLayout>
+</LinearLayout>

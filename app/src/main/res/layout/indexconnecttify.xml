@@ -120,8 +120,6 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-
-
             <!-- Bai viet cua nguoi dung -->
             <LinearLayout
                 android:layout_width="match_parent"

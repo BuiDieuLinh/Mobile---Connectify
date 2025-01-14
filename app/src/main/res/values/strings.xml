@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BTL_Mobile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="follows_fragment">Follows fragment</string>
+    <string name="following_fragment">Following fragment</string>
+    <string name="flag_fragment">Flag fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

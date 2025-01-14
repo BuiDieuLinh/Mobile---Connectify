@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
 
         <FrameLayout
             android:layout_width="0dp"
@@ -53,498 +54,570 @@
             ></ImageView>
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <!-- ScrollView cho phép nội dung cuộn -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        android:layout_marginTop="15dp">
+        android:layout_height="match_parent"
+        android:layout_above="@id/tabMenu"
+        android:layout_marginTop="40dp">
 
-        <!-- Story cua nguoi dung ne-->
+        <!-- Nội dung chính của bạn -->
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scrollbars="none">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <!-- Cai nay de hien thi hinh anh -->
-            <FrameLayout
-                android:layout_width="wrap_content"
+            <!-- Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_gradient"
-                android:layout_marginEnd="8dp">
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:scrollbars="none">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_margin="2dp"
-                    app:cardCornerRadius="999dp"
-                    app:cardBackgroundColor="@android:color/white">
+                <!-- Story cua nguoi dung ne-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:scrollbars="none">
 
-                    <ImageView
+                    <!-- Cai nay de hien thi hinh anh -->
+                    <FrameLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:srcCompat="@drawable/btdl" />
-                </androidx.cardview.widget.CardView>
-            </FrameLayout>
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/border_gradient">
 
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="2dp"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="999dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/btdl" />
+                        </androidx.cardview.widget.CardView>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <!-- Thong tin theo doi -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <!-- Bài viết -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="0"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="bài viết"></TextView>
+                    </LinearLayout>
+
+                    <!-- Người theo dõi -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="107"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="người theo dõi"></TextView>
+                    </LinearLayout>
+
+                    <!-- Đang theo dõi -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="117"></TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="đang theo dõi"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+
+                <!-- Ten nguoi dung o phan story-->
+                <TextView
+                    android:id="@+id/tvNameUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Bùi Linh" />
+
+                <!-- Ten nguoi dung o phan story-->
+                <TextView
+                    android:id="@+id/tvBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center_horizontal"
+                    android:text="10đ" />
+            </LinearLayout>
+
+            <!-- Edit share -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_button"
+                    android:text="Chỉnh sửa"
+                    android:textColor="@color/black"></Button>
+
+                <Button
+                    android:id="@+id/btnShareProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_button"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="Chia sẻ trang cá nhân"
+                    android:textColor="@color/black"></Button>
+
+                <ImageButton
+                    android:id="@+id/ibtnAddFriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/border_button"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:src="@drawable/user_add"
+                    android:textColor="@color/black"></ImageButton>
+            </LinearLayout>
+
+            <!-- Khám phá mọi người -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Khám phá mọi người"></TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Xem tất cả"
+                    android:textAlignment="textEnd"
+                    android:textColor="#2937FA"
+                    android:textStyle="bold"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <!-- Story cua nguoi dung ne-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_button"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:scrollbars="none">
+
+                            <!-- Cai nay de hien thi hinh anh -->
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_gradient">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="2dp"
+                                    app:cardBackgroundColor="@android:color/white"
+                                    app:cardCornerRadius="999dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/lvm" />
+                                </androidx.cardview.widget.CardView>
+                            </FrameLayout>
+
+                            <!-- Ten nguoi dung o phan story-->
+                            <TextView
+                                android:id="@+id/tvNameUser1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="muahe.2004" />
+
+                            <TextView
+                                android:id="@+id/tvInfoFollows"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="Có huyentrang251 và 9 người khác theo dõi" />
+
+                            <Button
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_btnfollow"
+                                android:text="Theo dõi"></Button>
+                        </LinearLayout>
+
+                        <!-- Story cua nguoi dung ne-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_button"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:scrollbars="none">
+
+                            <!-- Cai nay de hien thi hinh anh -->
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_gradient">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="2dp"
+                                    app:cardBackgroundColor="@android:color/white"
+                                    app:cardCornerRadius="999dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/lvm" />
+                                </androidx.cardview.widget.CardView>
+                            </FrameLayout>
+
+                            <!-- Ten nguoi dung o phan story-->
+                            <TextView
+                                android:id="@+id/tvNameUser2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="muahe.2004" />
+
+                            <TextView
+                                android:id="@+id/tvInfoFollow2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="Có huyentrang251 và 9 người khác theo dõi" />
+
+                            <Button
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_btnfollow"
+                                android:text="Theo dõi"></Button>
+                        </LinearLayout>
+
+                        <!-- Story cua nguoi dung ne-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_button"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:scrollbars="none">
+
+                            <!-- Cai nay de hien thi hinh anh -->
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_gradient">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="2dp"
+                                    app:cardBackgroundColor="@android:color/white"
+                                    app:cardCornerRadius="999dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/lvm" />
+                                </androidx.cardview.widget.CardView>
+                            </FrameLayout>
+
+                            <!-- Ten nguoi dung o phan story-->
+                            <TextView
+                                android:id="@+id/tvNameUser3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="muahe.2004" />
+
+                            <TextView
+                                android:id="@+id/tvInfoFollow3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="Có huyentrang251 và 9 người khác theo dõi" />
+
+                            <Button
+                                android:layout_width="130dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_btnfollow"
+                                android:text="Theo dõi"></Button>
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- Story -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <!-- Story cua nguoi dung ne-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:scrollbars="none">
+
+                            <!-- Cai nay de hien thi hinh anh -->
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_story">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="2dp"
+                                    app:cardBackgroundColor="@android:color/white"
+                                    app:cardCornerRadius="999dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/plus" />
+                                </androidx.cardview.widget.CardView>
+                            </FrameLayout>
+
+                            <!-- Ten nguoi dung o phan story-->
+                            <TextView
+                                android:id="@+id/tvNameStory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="Mới" />
+                        </LinearLayout>
+
+                        <!-- Story cua nguoi dung ne-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:scrollbars="none">
+
+                            <!-- Cai nay de hien thi hinh anh -->
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border_story">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_margin="2dp"
+                                    app:cardBackgroundColor="@android:color/white"
+                                    app:cardCornerRadius="999dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/lvm" />
+                                </androidx.cardview.widget.CardView>
+                            </FrameLayout>
+
+                            <!-- Ten nguoi dung o phan story-->
+                            <TextView
+                                android:id="@+id/tvNameStory1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:text="muahe.2004" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- Tab quản lý -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
-
-        <!-- Thong tin theo doi -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <!-- Bài viết -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:gravity="center"></TextView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="bài viết"></TextView>
-            </LinearLayout>
-
-            <!-- Người theo dõi -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="107"
-                    android:gravity="center"></TextView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="người theo dõi"
-                    android:gravity="center"></TextView>
-            </LinearLayout>
-
-            <!-- Đang theo dõi -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="117"
-                    android:gravity="center"></TextView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="đang theo dõi"
-                    android:gravity="center"></TextView>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
+    </ScrollView>
+    <!-- Tab Menu luôn luôn dính dưới cùng màn hình -->
     <LinearLayout
+        android:id="@+id/tabMenu"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="5dp"
-        android:orientation="vertical">
-
-        <!-- Ten nguoi dung o phan story-->
-        <TextView
-            android:id="@+id/tvNameUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Bùi Linh"
-            android:layout_marginTop="5dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_alignParentBottom="true" />
-
-        <!-- Ten nguoi dung o phan story-->
-        <TextView
-            android:id="@+id/tvBio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="10đ"
-            android:layout_gravity="center_horizontal"
-            android:layout_alignParentBottom="true" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnEditProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chỉnh sửa"
-            android:textColor="@color/black"
-            android:background="@drawable/border_button"></Button>
-
-        <Button
-            android:id="@+id/btnShareProfile"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp"
-            android:text="Chia sẻ trang cá nhân"
-            android:textColor="@color/black"
-            android:background="@drawable/border_button"
-            android:backgroundTint="@android:color/transparent"></Button>
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
 
         <ImageButton
-            android:id="@+id/ibtnAddFriend"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/user_add"
-            android:layout_gravity="center"
-            android:layout_marginLeft="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:textColor="@color/black"
-            android:background="@drawable/border_button"></ImageButton>
-    </LinearLayout>
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/trangchu"
+            android:contentDescription="home"
+            android:background="?android:attr/selectableItemBackground" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="15dp">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+            android:contentDescription="Search"
+            android:background="?android:attr/selectableItemBackground" />
 
-        <TextView
-            android:layout_width="0dp"
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/newpost"
+            android:contentDescription="Profile"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/film"
+            android:contentDescription="Profile"
+            android:background="?android:attr/selectableItemBackground" />
+
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Khám phá mọi người"></TextView>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAlignment="textEnd"
-            android:text="Xem tất cả"
-            android:textStyle="bold"
-            android:textColor="#2937FA"></TextView>
-
+            android:src="@drawable/user"
+            android:contentDescription="Search"
+            android:background="?android:attr/selectableItemBackground" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:scrollbars="none"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <!-- Story cua nguoi dung ne-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginRight="5dp"
-                    android:orientation="vertical"
-                    android:padding="10dp"
-                    android:scrollbars="none"
-                    android:background="@drawable/border_button">
-
-                    <!-- Cai nay de hien thi hinh anh -->
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/border_gradient">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="2dp"
-                            app:cardBackgroundColor="@android:color/white"
-                            app:cardCornerRadius="999dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/lvm" />
-                        </androidx.cardview.widget.CardView>
-                    </FrameLayout>
-
-                    <!-- Ten nguoi dung o phan story-->
-                    <TextView
-                        android:id="@+id/tvNameUser1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:text="muahe.2004" />
-
-                    <TextView
-                        android:id="@+id/tvInfoFollows"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:text="Có huyentrang251 và 9 người khác theo dõi" />
-
-                    <Button
-                        android:layout_width="130dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/border_btnfollow"
-                        android:text="Theo dõi"></Button>
-                </LinearLayout>
-
-                <!-- Story cua nguoi dung ne-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:padding="10dp"
-                    android:layout_marginRight="5dp"
-                    android:scrollbars="none"
-                    android:background="@drawable/border_button">
-
-                    <!-- Cai nay de hien thi hinh anh -->
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/border_gradient">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="2dp"
-                            app:cardBackgroundColor="@android:color/white"
-                            app:cardCornerRadius="999dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/lvm" />
-                        </androidx.cardview.widget.CardView>
-                    </FrameLayout>
-
-                    <!-- Ten nguoi dung o phan story-->
-                    <TextView
-                        android:id="@+id/tvNameUser2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:text="muahe.2004" />
-
-                    <TextView
-                        android:id="@+id/tvInfoFollow2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:text="Có huyentrang251 và 9 người khác theo dõi" />
-
-                    <Button
-                        android:layout_width="130dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/border_btnfollow"
-                        android:text="Theo dõi"></Button>
-                </LinearLayout>
-
-                <!-- Story cua nguoi dung ne-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:padding="10dp"
-                    android:scrollbars="none"
-                    android:background="@drawable/border_button">
-
-                    <!-- Cai nay de hien thi hinh anh -->
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/border_gradient">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="2dp"
-                            app:cardBackgroundColor="@android:color/white"
-                            app:cardCornerRadius="999dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/lvm" />
-                        </androidx.cardview.widget.CardView>
-                    </FrameLayout>
-
-                    <!-- Ten nguoi dung o phan story-->
-                    <TextView
-                        android:id="@+id/tvNameUser3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:text="muahe.2004" />
-
-                    <TextView
-                        android:id="@+id/tvInfoFollow3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:text="Có huyentrang251 và 9 người khác theo dõi" />
-
-                    <Button
-                        android:layout_width="130dp"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/border_btnfollow"
-                        android:text="Theo dõi"></Button>
-                </LinearLayout>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:scrollbars="none"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <!-- Story cua nguoi dung ne-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginRight="5dp"
-                    android:orientation="vertical"
-                    android:padding="10dp"
-                    android:scrollbars="none">
-
-                    <!-- Cai nay de hien thi hinh anh -->
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/border_story">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="2dp"
-                            app:cardBackgroundColor="@android:color/white"
-                            app:cardCornerRadius="999dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/plus" />
-                        </androidx.cardview.widget.CardView>
-                    </FrameLayout>
-
-                    <!-- Ten nguoi dung o phan story-->
-                    <TextView
-                        android:id="@+id/tvNameStory"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:text="Mới" />
-                </LinearLayout>
-
-                <!-- Story cua nguoi dung ne-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:padding="10dp"
-                    android:layout_marginRight="5dp"
-                    android:scrollbars="none">
-
-                    <!-- Cai nay de hien thi hinh anh -->
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/border_story">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_margin="2dp"
-                            app:cardBackgroundColor="@android:color/white"
-                            app:cardCornerRadius="999dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/lvm" />
-                        </androidx.cardview.widget.CardView>
-                    </FrameLayout>
-
-                    <!-- Ten nguoi dung o phan story-->
-                    <TextView
-                        android:id="@+id/tvNameStory1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:text="muahe.2004" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></LinearLayout>
-</LinearLayout>
+</RelativeLayout>

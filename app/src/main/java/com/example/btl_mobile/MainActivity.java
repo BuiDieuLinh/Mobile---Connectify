@@ -20,16 +20,17 @@ import com.example.btl_mobile.actIndex;
 public class MainActivity extends AppCompatActivity {
     // Bước 1: Khai báo các thành phần giao diện
     Button btnLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.loginconnectify);
-        btnLogin = findViewById(R.id.btnLogin);
-
-        btnLogin.setOnClickListener(v -> {
-            Intent it = new Intent(MainActivity.this, actIndex.class);
-            startActivity(it);
-            finish(); //
-        });
+        setContentView(R.layout.homeadmin);
+//        btnLogin = findViewById(R.id.btnLogin);
+//
+//        btnLogin.setOnClickListener(v -> {
+//            Intent it = new Intent(MainActivity.this, actIndex.class);
+//            startActivity(it);
+//            finish(); //
+//        });
     }
 }

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frameTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Bài viết mới"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Icon (đè lên) -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/arrow_left" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/frameTitle"
+        android:layout_above="@+id/btnPost">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgImagePost"
+                    android:layout_width="250dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btdl"></ImageView>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Image"
+                    android:background="@drawable/picture"
+                    android:padding="20dp"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="30dp"></ImageButton>
+            </FrameLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:hint="Thêm chú thích..."
+                android:padding="10dp"></EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/portrait"></ImageView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gắn thẻ người khác"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:textSize="16dp"></TextView>
+                <ImageView
+                    android:id="@+id/imgSwitchTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/angle_right"></ImageView>
+
+            </LinearLayout>
+            <!-- Đường kẻ ngang -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#B0B0B0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/meta"></ImageView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Thêm nhac"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:textSize="16dp"></TextView>
+                <ImageView
+                    android:id="@+id/imgSwitchMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/angle_right"></ImageView>
+
+            </LinearLayout>
+            <!-- Đường kẻ ngang -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#B0B0B0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/map_marker"></ImageView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Thêm vị trí"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:textSize="16dp"></TextView>
+                <ImageView
+                    android:id="@+id/imgSwitchAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/angle_right"></ImageView>
+
+            </LinearLayout>
+            <!-- Đường kẻ ngang -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#B0B0B0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/meta"></ImageView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quyền riêng tư"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:textSize="16dp"></TextView>
+                <ImageView
+                    android:id="@+id/imgSwitchPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/angle_right"></ImageView>
+
+            </LinearLayout>
+            <!-- Đường kẻ ngang -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#B0B0B0" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chia sẻ"
+        android:background="@drawable/border_btnfollow"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"></Button>
+</RelativeLayout>

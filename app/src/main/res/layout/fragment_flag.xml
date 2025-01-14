@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FlagFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mặc dù tài khoản của bạn đang ở chế độ công khai, nhưng một số tài khoản sẽ cần được bạn phê duyệt rồi mới có thể theo dõi bạn. Các yêu cầu từ hơn 30 ngày trước sẽ bị xoá. Bạn có thể thay đổi lựa chọn này bất cứ lúc nào trong phần Cài đặt."
+                android:layout_marginBottom="15dp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xoá tất cả yêu cầu"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#014AA2"
+                android:layout_marginBottom="15dp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 yêu cầu theo dõi"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"></TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <!-- Cai nay de hien thi hinh anh -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_gradient">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="999dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/btdl" />
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+                <!-- Name follower -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <!-- Name -->
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="HuyenTrang251"
+                        android:paddingLeft="10dp"
+                        ></TextView>
+                    <!-- Name user-->
+                    <TextView
+                        android:id="@+id/tvNameUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="HuyenTrang"
+                        android:paddingLeft="10dp"
+                        android:textColor="#888"></TextView>
+                </LinearLayout>
+
+
+                <!--Theođõi lại -->
+                <Button
+                    android:id="@+id/btnAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:text="Xác nhận"
+                    android:background="@drawable/border_button"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"></Button>
+                <!--Theođõi lại -->
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:text="Xoá"
+                    android:background="@drawable/border_button"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"></Button>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

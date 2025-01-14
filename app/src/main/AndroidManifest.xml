@@ -14,7 +14,7 @@
 
         <!-- MainActivity khai báo đúng -->
         <activity
-            android:name=".actNotification"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +22,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".actIndex" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".actProfile"/>
+        <activity android:name=".actFollows"/>
+        <activity android:name=".actNotification" />
+        <activity android:name=".actManageUser"/>
+        <activity android:name=".actManagerPost"/>
+        <activity android:name=".actManage"/>
+
     </application>
 </manifest>
