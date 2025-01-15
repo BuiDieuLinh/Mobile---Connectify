@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class actchat extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -48,7 +48,7 @@ public class actTabControl extends AppCompatActivity {
 
 
                     // Hiển thị thông báo thành công
-                    Toast.makeText(actTabControl.this, "Thông tin đã được lưu!", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(actTabControl.this, "Thông tin đã được lưu!", Toast.LENGTH_SHORT).show();
                 } else {
                     // Xử lý lỗi nếu không thành công
                     Toast.makeText(actTabControl.this, "Không tìm thấy người dùng!", Toast.LENGTH_SHORT).show();

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Trạng thái bình thường -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Gradient Màu nền -->
+            <gradient
+                android:angle="45"
+                android:startColor="#135029"
+                android:endColor="#33FF57"
+                android:type="linear" />
+
+            <!-- Viền ngoài -->
+            <stroke
+                android:width="2dp"
+                android:color="@android:color/darker_gray" />
+
+            <!-- Góc bo tròn -->
+            <corners android:radius="999dp" />
+        </shape>
+    </item>
+</selector>

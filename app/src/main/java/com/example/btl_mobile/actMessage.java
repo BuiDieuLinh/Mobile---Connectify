@@ -73,6 +73,7 @@ public class actMessage extends AppCompatActivity {
         });
     }
 
+    // Thay vì dùng Thread để tải ảnh, sử dụng Glide (hoặc Picasso) để tải ảnh một cách dễ dàng hơn
     private void populateUserList(List<User> userList) {
         // Dọn dẹp dữ liệu cũ trong LinearLayout
         userListLayout.removeAllViews();
@@ -100,8 +101,8 @@ public class actMessage extends AppCompatActivity {
             avatarImageView.setLayoutParams(new CardView.LayoutParams(90, 90));
             avatarImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
-            // Tải ảnh từ URL (không dùng Glide)
-            Thread thread = new Thread(() -> {
+            // Tải ảnh từ URL bằng Thread
+            new Thread(() -> {
                 try {
                     URL url = new URL(user.getProfilePictureURL());
                     Bitmap bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream());
@@ -111,10 +112,9 @@ public class actMessage extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                     // Hiển thị ảnh mặc định nếu URL không hợp lệ hoặc tải thất bại
-                    runOnUiThread(() -> avatarImageView.setImageResource(R.drawable.lvm));
+                    runOnUiThread(() -> avatarImageView.setImageResource(R.drawable.default_avt));
                 }
-            });
-            thread.start();
+            }).start();
 
             // Thêm ImageView vào CardView
             cardView.addView(avatarImageView);
@@ -172,6 +172,8 @@ public class actMessage extends AppCompatActivity {
             userListLayout.addView(userLayout);
         }
     }
+
+
 
 
 

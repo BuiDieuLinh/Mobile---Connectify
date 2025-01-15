@@ -1,6 +1,7 @@
 package com.example.btl_mobile;
 
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
@@ -12,6 +13,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
@@ -49,6 +51,13 @@ public class actMessages extends AppCompatActivity {
         // Lấy thông tin người dùng từ SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("userClick", MODE_PRIVATE);
         int userID = sharedPreferences.getInt("userID", -1);  // Lấy userID
+        String username = sharedPreferences.getString("userName", "Friend");
+        String fullname = sharedPreferences.getString("fullName", "Friend");
+
+        TextView tvName1 = findViewById(R.id.tvName1);
+        tvName1.setText(fullname);
+        TextView tvAdd1 = findViewById(R.id.tvAdd1);
+        tvAdd1.setText(username);
 
         SharedPreferences myInfo = getSharedPreferences("editor", MODE_PRIVATE);
         int myID = myInfo.getInt("userID", -1); // Lấy giá trị userID
@@ -74,8 +83,8 @@ public class actMessages extends AppCompatActivity {
                     return;
                 }
 
-                int senderId = userID; // ID của người gửi
-                int receiverID = friendID;   // ID của người nhận
+                int senderId = friendID; // ID của người gửi
+                int receiverID = userID;   // ID của người nhận
 
                 // Tạo đối tượng Message_Send để gửi tin nhắn
                 Message_Send messageSend = new Message_Send(senderId, receiverID, content);
@@ -127,14 +136,13 @@ public class actMessages extends AppCompatActivity {
         handler.removeCallbacks(runnable);
     }
 
-    // Phương thức lấy danh sách tin nhắn từ API
     private void loadMessages(int userID, int myID) {
         apiService.getMessageBoxChat(userID, myID).enqueue(new Callback<List<Message>>() {
             @Override
             public void onResponse(Call<List<Message>> call, Response<List<Message>> response) {
                 if (response.isSuccessful()) {
                     List<Message> messages = response.body();
-                    linearLayout.removeAllViews();  // Xóa tất cả các tin nhắn cũ
+                    linearLayout.removeAllViews();
                     for (Message message : messages) {
                         addMessageToView(message.getContent(), message.getSenderId());
                     }
@@ -150,7 +158,6 @@ public class actMessages extends AppCompatActivity {
         });
     }
 
-    // Phương thức thêm tin nhắn vào giao diện
     private void addMessageToView(String messageContent, int senderId) {
         // Lấy userID từ SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("userClick", MODE_PRIVATE);
@@ -161,37 +168,75 @@ public class actMessages extends AppCompatActivity {
             return;
         }
 
-        // Tạo TextView để hiển thị tin nhắn
         TextView textView = new TextView(this);
         textView.setPadding(20, 20, 20, 20);
         textView.setText(messageContent);
 
-        // Định dạng bố cục cho TextView
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
         params.setMargins(0, 0, 0, 20);
 
-        // Xác định vị trí hiển thị tin nhắn
         if (senderId == userID) {
-            // Nếu là tin nhắn của người dùng thì căn phải
             textView.setBackgroundResource(R.drawable.border_search); // Background cho tin nhắn gửi
-            params.gravity = Gravity.END; // Căn phải
+            params.gravity = Gravity.START;
         } else {
-            // Nếu là tin nhắn của người khác thì căn trái
-            textView.setBackgroundResource(R.drawable.border_search); // Background cho tin nhắn nhận
-            params.gravity = Gravity.START; // Căn trái
+            textView.setBackgroundResource(R.drawable.messsender);
+            textView.setTextColor(Color.WHITE);
+            params.gravity = Gravity.END;
         }
 
-        // Áp dụng các thuộc tính định dạng
         textView.setLayoutParams(params);
 
-        // Thêm TextView vào giao diện
+        textView.setOnLongClickListener(v -> {
+            // Tạo một AlertDialog với hai lựa chọn
+            new AlertDialog.Builder(actMessages.this)
+                    .setTitle("Chọn hành động")
+                    .setMessage("Bạn muốn làm gì với tin nhắn này?")
+                    .setPositiveButton("Sửa", (dialog, which) -> {
+                        // Khi chọn "Sửa", tạo giao diện sửa tin nhắn
+                        showEditMessageDialog(messageContent, textView);
+                    })
+                    .setNegativeButton("Thu hồi", (dialog, which) -> {
+                        // Xử lý thu hồi tin nhắn
+                        Toast.makeText(actMessages.this, "Thu hồi tin nhắn", Toast.LENGTH_SHORT).show();
+                    })
+                    .setCancelable(true)
+                    .show();
+            return true;
+        });
         linearLayout.addView(textView);
     }
 
-    // Phương thức tự động cuộn xuống dưới cùng
+    private void showEditMessageDialog(String currentMessage, TextView textView) {
+        // Tạo giao diện sửa tin nhắn
+        EditText editText = new EditText(this);
+        editText.setText(currentMessage);  // Điền nội dung tin nhắn hiện tại vào EditText
+        editText.setSelection(currentMessage.length());  // Đặt con trỏ ở cuối
+
+        // Tạo một Dialog để sửa tin nhắn
+        new AlertDialog.Builder(actMessages.this)
+                .setTitle("Sửa tin nhắn")
+                .setView(editText)  // Đặt EditText vào Dialog
+                .setPositiveButton("Lưu", (dialog, which) -> {
+                    String newMessage = editText.getText().toString().trim();
+                    if (!newMessage.isEmpty()) {
+                        // Cập nhật nội dung tin nhắn
+                        textView.setText(newMessage);
+                        Toast.makeText(actMessages.this, "Cập nhật tin nhắn thành công", Toast.LENGTH_SHORT).show();
+                        // Gọi API để cập nhật tin nhắn ở phía server nếu cần
+                    } else {
+                        Toast.makeText(actMessages.this, "Vui lòng nhập tin nhắn", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("Hủy", (dialog, which) -> {
+                    dialog.dismiss(); // Đóng Dialog nếu người dùng nhấn "Hủy"
+                })
+                .setCancelable(true)
+                .show();
+    }
+
     private void scrollToBottom() {
         scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
     }
