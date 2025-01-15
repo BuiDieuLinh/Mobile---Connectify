@@ -83,7 +83,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/phone_flip"
+            android:src="@drawable/phone"
             android:contentDescription="Notify button"
             android:background="@android:color/transparent" />
 
@@ -92,7 +92,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/lvm"
+            android:src="@drawable/video"
             android:contentDescription="Chat button"
             android:background="@android:color/transparent" />
     </LinearLayout>
@@ -115,104 +115,104 @@
 
             <!-- Nội dung TextView -->
             <!-- Nội dung TextView -->
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="10dp"-->
-<!--                android:paddingStart="10dp"-->
-<!--                android:paddingEnd="10dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:background="@drawable/border_search"-->
-<!--                android:text="Xin chào anh Ly Van Minh" />-->
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingEnd="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:background="@drawable/border_search"-->
+            <!--                android:text="Xin chào anh Ly Van Minh" />-->
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="10dp"-->
-<!--                android:paddingStart="10dp"-->
-<!--                android:paddingEnd="10dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:layout_gravity="end"-->
-<!--                android:background="@drawable/border_search"-->
-<!--                android:text="Xin chào anh Nguyen Van Liem" />-->
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingEnd="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:layout_gravity="end"-->
+            <!--                android:background="@drawable/border_search"-->
+            <!--                android:text="Xin chào anh Nguyen Van Liem" />-->
 
-<!--            &lt;!&ndash; Cần sử dụng code java để chỉnh kthc chứ k để cố định&ndash;&gt;-->
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="10dp"-->
-<!--                android:paddingStart="10dp"-->
-<!--                android:paddingEnd="10dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:background="@drawable/border_search"-->
-<!--                android:text="Nội dung quá dài sẽ tự động xuống dòng mà không bị cắt ngang ở phần cuối."-->
-<!--                android:singleLine="false"-->
-<!--                android:ellipsize="none"-->
-<!--                android:scrollHorizontally="false"-->
-<!--                android:maxWidth="280dp" />-->
+            <!--            &lt;!&ndash; Cần sử dụng code java để chỉnh kthc chứ k để cố định&ndash;&gt;-->
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingEnd="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:background="@drawable/border_search"-->
+            <!--                android:text="Nội dung quá dài sẽ tự động xuống dòng mà không bị cắt ngang ở phần cuối."-->
+            <!--                android:singleLine="false"-->
+            <!--                android:ellipsize="none"-->
+            <!--                android:scrollHorizontally="false"-->
+            <!--                android:maxWidth="280dp" />-->
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="10dp"-->
-<!--                android:paddingStart="10dp"-->
-<!--                android:paddingEnd="10dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:layout_gravity="end"-->
-<!--                android:background="@drawable/border_search"-->
-<!--                android:text="Xin chào anh Nguyen Van Liem" />-->
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingEnd="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:layout_gravity="end"-->
+            <!--                android:background="@drawable/border_search"-->
+            <!--                android:text="Xin chào anh Nguyen Van Liem" />-->
 
-<!--            &lt;!&ndash; Cần sử dụng code java để chỉnh kthc chứ k để cố định&ndash;&gt;-->
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="10dp"-->
-<!--                android:paddingStart="10dp"-->
-<!--                android:paddingEnd="10dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:background="@drawable/border_search"-->
-<!--                android:text="đâu nó bảo cái minSDK đg ở 24 cần ở 28."-->
-<!--                android:singleLine="false"-->
-<!--                android:ellipsize="none"-->
-<!--                android:scrollHorizontally="false"-->
-<!--                android:maxWidth="280dp" />-->
+            <!--            &lt;!&ndash; Cần sử dụng code java để chỉnh kthc chứ k để cố định&ndash;&gt;-->
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingEnd="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:background="@drawable/border_search"-->
+            <!--                android:text="đâu nó bảo cái minSDK đg ở 24 cần ở 28."-->
+            <!--                android:singleLine="false"-->
+            <!--                android:ellipsize="none"-->
+            <!--                android:scrollHorizontally="false"-->
+            <!--                android:maxWidth="280dp" />-->
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="10dp"-->
-<!--                android:paddingStart="10dp"-->
-<!--                android:paddingEnd="10dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:layout_gravity="end"-->
-<!--                android:background="@drawable/border_search"-->
-<!--                android:text="tóm lại 3 máy phiên bản k đồng nhất" />-->
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingEnd="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:layout_gravity="end"-->
+            <!--                android:background="@drawable/border_search"-->
+            <!--                android:text="tóm lại 3 máy phiên bản k đồng nhất" />-->
 
-<!--            &lt;!&ndash; Cần sử dụng code java để chỉnh kthc chứ k để cố định&ndash;&gt;-->
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="10dp"-->
-<!--                android:paddingStart="10dp"-->
-<!--                android:paddingEnd="10dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:background="@drawable/border_search"-->
-<!--                android:text="nãy mình cũng phải cài lại mấy cái mới chạy được"-->
-<!--                android:singleLine="false"-->
-<!--                android:ellipsize="none"-->
-<!--                android:scrollHorizontally="false"-->
-<!--                android:maxWidth="280dp" />-->
+            <!--            &lt;!&ndash; Cần sử dụng code java để chỉnh kthc chứ k để cố định&ndash;&gt;-->
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingEnd="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:background="@drawable/border_search"-->
+            <!--                android:text="nãy mình cũng phải cài lại mấy cái mới chạy được"-->
+            <!--                android:singleLine="false"-->
+            <!--                android:ellipsize="none"-->
+            <!--                android:scrollHorizontally="false"-->
+            <!--                android:maxWidth="280dp" />-->
 
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="10dp"-->
-<!--                android:paddingStart="10dp"-->
-<!--                android:paddingEnd="10dp"-->
-<!--                android:layout_marginBottom="10dp"-->
-<!--                android:layout_gravity="end"-->
-<!--                android:background="@drawable/border_search"-->
-<!--                android:text="tóm lại 3 máy phiên bản k đồng nhất" />-->
+            <!--            <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="10dp"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingEnd="10dp"-->
+            <!--                android:layout_marginBottom="10dp"-->
+            <!--                android:layout_gravity="end"-->
+            <!--                android:background="@drawable/border_search"-->
+            <!--                android:text="tóm lại 3 máy phiên bản k đồng nhất" />-->
 
 
         </LinearLayout>
@@ -264,7 +264,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/share"
+            android:src="@drawable/send"
             android:contentDescription="Send button"
             android:background="@android:color/transparent" />
     </LinearLayout>
