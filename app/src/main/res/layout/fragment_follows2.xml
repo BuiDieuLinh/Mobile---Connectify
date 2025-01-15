@@ -22,145 +22,155 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="15dp"></TextView>
 
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp">
+                android:layout_height="0dp"
+                android:padding="16dp"
+                android:scrollbars="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingTop="5dp"-->
+<!--                android:paddingBottom="5dp">-->
 
-                <!-- Cai nay de hien thi hinh anh -->
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/border_gradient">
+<!--                &lt;!&ndash; Cai nay de hien thi hinh anh &ndash;&gt;-->
+<!--                <FrameLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/border_gradient">-->
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="2dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="999dp">
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_margin="2dp"-->
+<!--                        app:cardBackgroundColor="@android:color/white"-->
+<!--                        app:cardCornerRadius="999dp">-->
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/btdl" />
-                    </androidx.cardview.widget.CardView>
-                </FrameLayout>
-                <!-- Name follower -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <!-- Name -->
-                    <TextView
-                        android:id="@+id/tvName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="HuyenTrang251"
-                        android:paddingLeft="10dp"
-                        ></TextView>
-                    <!-- Name user-->
-                    <TextView
-                        android:id="@+id/tvNameUser"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="HuyenTrang"
-                        android:paddingLeft="10dp"
-                        android:textColor="#888"></TextView>
-                </LinearLayout>
-
-
-                <!--Theođõi lại -->
-                <Button
-                    android:id="@+id/btnFollow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Follow"
-                    android:background="@drawable/border_btnfollow"
-                    android:layout_gravity="center"></Button>
-                <ImageView
-                    android:id="@+id/imgDeleteFriend"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/menu_dots"
-                    android:layout_marginLeft="10dp"></ImageView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp">
-
-                <!-- Cai nay de hien thi hinh anh -->
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/border_gradient">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_margin="2dp"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="999dp">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/btdl" />
-                    </androidx.cardview.widget.CardView>
-                </FrameLayout>
-                <!-- Name follower -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-                    <!-- Name -->
-                    <TextView
-                        android:id="@+id/tvName1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="HuyenTrang251"
-                        android:paddingLeft="10dp"
-                        ></TextView>
-                    <!-- Name user-->
-                    <TextView
-                        android:id="@+id/tvNameUser1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="HuyenTrang"
-                        android:paddingLeft="10dp"
-                        android:textColor="#888"></TextView>
-                </LinearLayout>
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            app:srcCompat="@drawable/btdl" />-->
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </FrameLayout>-->
+<!--                &lt;!&ndash; Name follower &ndash;&gt;-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+<!--                    &lt;!&ndash; Name &ndash;&gt;-->
+<!--&lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:id="@+id/tvName"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:text="HuyenTrang251"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:paddingLeft="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                        ></TextView>&ndash;&gt;-->
+<!--&lt;!&ndash;                    &lt;!&ndash; Name user&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:id="@+id/tvNameUser"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:text="HuyenTrang"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:paddingLeft="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:textColor="#888"></TextView>&ndash;&gt;-->
+<!--                </LinearLayout>-->
 
 
-                <!--Theođõi lại -->
-                <Button
-                    android:id="@+id/btnFollow1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="Follow"
-                    android:background="@drawable/border_btnfollow"
-                    android:layout_gravity="center"></Button>
-                <ImageView
-                    android:id="@+id/imgDeleteFriend1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/menu_dots"
-                    android:layout_marginLeft="10dp"></ImageView>
-            </LinearLayout>
+<!--                &lt;!&ndash;Theođõi lại &ndash;&gt;-->
+<!--                <Button-->
+<!--                    android:id="@+id/btnFollow"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:text="Follow"-->
+<!--                    android:background="@drawable/border_btnfollow"-->
+<!--                    android:layout_gravity="center"></Button>-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/imgDeleteFriend"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@drawable/menu_dots"-->
+<!--                    android:layout_marginLeft="10dp"></ImageView>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingTop="5dp"-->
+<!--                android:paddingBottom="5dp">-->
+
+<!--                &lt;!&ndash; Cai nay de hien thi hinh anh &ndash;&gt;-->
+<!--                <FrameLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@drawable/border_gradient">-->
+
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_margin="2dp"-->
+<!--                        app:cardBackgroundColor="@android:color/white"-->
+<!--                        app:cardCornerRadius="999dp">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            app:srcCompat="@drawable/btdl" />-->
+<!--                    </androidx.cardview.widget.CardView>-->
+<!--                </FrameLayout>-->
+<!--                &lt;!&ndash; Name follower &ndash;&gt;-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+<!--                    &lt;!&ndash; Name &ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvName1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:text="HuyenTrang251"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        ></TextView>-->
+<!--                    &lt;!&ndash; Name user&ndash;&gt;-->
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvNameUser1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:text="HuyenTrang"-->
+<!--                        android:paddingLeft="10dp"-->
+<!--                        android:textColor="#888"></TextView>-->
+<!--                </LinearLayout>-->
+
+
+<!--                &lt;!&ndash;Theođõi lại &ndash;&gt;-->
+<!--                <Button-->
+<!--                    android:id="@+id/btnFollow1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:text="Follow"-->
+<!--                    android:background="@drawable/border_btnfollow"-->
+<!--                    android:layout_gravity="center"></Button>-->
+<!--                <ImageView-->
+<!--                    android:id="@+id/imgDeleteFriend1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@drawable/menu_dots"-->
+<!--                    android:layout_marginLeft="10dp"></ImageView>-->
+<!--            </LinearLayout>-->
         </LinearLayout>
     </ScrollView>
 

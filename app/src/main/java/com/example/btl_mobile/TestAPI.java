@@ -1,5 +1,6 @@
 package com.example.btl_mobile;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -29,14 +30,14 @@ import retrofit2.Response;
 public class TestAPI extends AppCompatActivity {
     private APIUser userApi;
     private RecyclerView recyclerView;
-    private TextView textView7;
     private UserAdapter userAdapter;
     private List<User> userList = new ArrayList<>();
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.test_api);
+        setContentView(R.layout.fragment_follows2);
         userApi = RetrofitClient.getInstance().create(APIUser.class);
 
         // Khởi tạo RecyclerView
@@ -73,25 +74,4 @@ public class TestAPI extends AppCompatActivity {
             }
         });
     }
-//private void fetchAllUsers() {
-//    userApi.getAll().enqueue(new Callback<List<User>>() {
-//        @Override
-//        public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-//            if (response.isSuccessful() && response.body() != null) {
-//                // Nhận dữ liệu từ API
-//                userList.addAll(response.body());
-//                userAdapter.notifyDataSetChanged(); // Cập nhật RecyclerView
-//            } else {
-//                Log.e("Error", "Không thể lấy dữ liệu người dùng");
-//            }
-//        }
-//
-//        @Override
-//        public void onFailure(Call<List<User>> call, Throwable t) {
-//            textView7.setText(t.getMessage());
-//            Log.e("Error", "Lỗi kết nối: " + t.getMessage());
-//        }
-//    });
-//}
-
 }

@@ -24,12 +24,13 @@ public class actManage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent it = new Intent(actManage.this, actManageUser.class);
                 startActivity(it);
+                finish();
             }
         });
         btnManagePost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(actManage.this, actManageUser.class);
+                Intent it = new Intent(actManage.this, actManagerPost.class);
                 startActivity(it);
             }
         });

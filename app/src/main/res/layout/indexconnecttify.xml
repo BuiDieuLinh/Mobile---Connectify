@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    tools:context=".HomeFragment">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -29,6 +30,7 @@
             tools:ignore="RtlCompat" />
 
         <ImageButton
+            android:id="@+id/ibtnNotify"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -38,6 +40,7 @@
             android:background="@android:color/transparent" />
 
         <ImageButton
+            android:id="@+id/ibtnMessage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -53,8 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="10dp"
-        android:layout_marginTop="60dp"
-        android:layout_above="@id/tabMenu">
+        android:layout_marginTop="60dp">
 
         <!-- Nội dung chính của bạn -->
         <LinearLayout
@@ -200,6 +202,7 @@
                     android:scrollbars="none">
 
                     <ImageButton
+                        android:id="@+id/ibtnTym"
                         android:layout_width="wrap_content"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -208,6 +211,7 @@
                         android:background="?android:attr/selectableItemBackground" />
 
                     <ImageButton
+                        android:id="@+id/ibtnComment"
                         android:layout_width="wrap_content"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -216,6 +220,7 @@
                         android:background="?android:attr/selectableItemBackground" />
 
                     <ImageButton
+                        android:id="@+id/ibtnShare"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -348,55 +353,55 @@
 
     </ScrollView>
     <!-- Tab Menu luôn luôn dính dưới cùng màn hình -->
-    <LinearLayout
-        android:id="@+id/tabMenu"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:gravity="center">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/tabMenu"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:background="@android:color/white"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:gravity="center">-->
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:src="@drawable/trangchu"
-            android:contentDescription="home"
-            android:background="?android:attr/selectableItemBackground" />
+<!--        <ImageButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/trangchu"-->
+<!--            android:contentDescription="home"-->
+<!--            android:background="?android:attr/selectableItemBackground" />-->
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:src="@drawable/search"
-            android:contentDescription="Search"
-            android:background="?android:attr/selectableItemBackground" />
+<!--        <ImageButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/search"-->
+<!--            android:contentDescription="Search"-->
+<!--            android:background="?android:attr/selectableItemBackground" />-->
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:src="@drawable/newpost"
-            android:contentDescription="Profile"
-            android:background="?android:attr/selectableItemBackground" />
+<!--        <ImageButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/newpost"-->
+<!--            android:contentDescription="Profile"-->
+<!--            android:background="?android:attr/selectableItemBackground" />-->
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:src="@drawable/film"
-            android:contentDescription="Profile"
-            android:background="?android:attr/selectableItemBackground" />
+<!--        <ImageButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/film"-->
+<!--            android:contentDescription="Profile"-->
+<!--            android:background="?android:attr/selectableItemBackground" />-->
 
 
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/user"
-            android:contentDescription="Search"
-            android:background="?android:attr/selectableItemBackground" />
-    </LinearLayout>
+<!--        <ImageButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:src="@drawable/user"-->
+<!--            android:contentDescription="Search"-->
+<!--            android:background="?android:attr/selectableItemBackground" />-->
+<!--    </LinearLayout>-->
 </RelativeLayout>

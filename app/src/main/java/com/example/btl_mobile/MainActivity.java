@@ -10,6 +10,7 @@ import android.view.View;
 //import android.widget.Button;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.btl_mobile.R;
@@ -20,15 +21,23 @@ import com.example.btl_mobile.actIndex;
 public class MainActivity extends AppCompatActivity {
     // Bước 1: Khai báo các thành phần giao diện
     Button btnLogin;
+    ImageView imgBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.homeadmin);
+        setContentView(R.layout.tabcontrol);
 //        btnLogin = findViewById(R.id.btnLogin);
 //
 //        btnLogin.setOnClickListener(v -> {
 //            Intent it = new Intent(MainActivity.this, actIndex.class);
+//            startActivity(it);
+//            finish(); //
+//        });
+//        imgBack = findViewById(R.id.imgBack);
+//
+//        imgBack.setOnClickListener(v -> {
+//            Intent it = new Intent(this, actManage.class);
 //            startActivity(it);
 //            finish(); //
 //        });

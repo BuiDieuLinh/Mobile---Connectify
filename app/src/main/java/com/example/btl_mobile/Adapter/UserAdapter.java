@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.btl_mobile.Data.User;
 import com.example.btl_mobile.R;
 
+import java.text.BreakIterator;
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
@@ -32,7 +33,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         User user = userList.get(position);
         holder.tvUsername.setText(user.getUsername());
-        holder.tvEmail.setText(user.getEmail());
+        holder.tvFullName.setText(user.getFullName());
         holder.tvUsername.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,12 +48,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     }
 
     static class UserViewHolder extends RecyclerView.ViewHolder {
-        TextView tvUsername, tvEmail, tvBio;
+        TextView tvUsername, tvFullName, tvBio;
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
             tvUsername = itemView.findViewById(R.id.tvNameUser);
-            tvEmail = itemView.findViewById(R.id.tvName);
+            tvFullName = itemView.findViewById(R.id.tvName);
         }
     }
 }
