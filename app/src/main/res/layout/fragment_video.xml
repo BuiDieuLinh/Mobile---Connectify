@@ -31,7 +31,7 @@
                 android:id="@+id/cameraViewfinder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/camera"
+                android:background="@drawable/notify"
                 android:layout_alignParentEnd="true" />
         </RelativeLayout>
 

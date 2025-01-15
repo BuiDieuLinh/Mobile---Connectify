@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".HomeFragment">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -30,7 +29,7 @@
             tools:ignore="RtlCompat" />
 
         <ImageButton
-            android:id="@+id/ibtnNotify"
+            android:id="@+id/btnNotify2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -40,7 +39,7 @@
             android:background="@android:color/transparent" />
 
         <ImageButton
-            android:id="@+id/ibtnMessage"
+            android:id="@+id/btnBoxChat"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,7 +55,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="10dp"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="60dp"
+        android:layout_above="@id/tabMenu">
 
         <!-- Nội dung chính của bạn -->
         <LinearLayout
@@ -121,6 +121,8 @@
 
                 </LinearLayout>
             </HorizontalScrollView>
+
+
 
             <!-- Bai viet cua nguoi dung -->
             <LinearLayout
@@ -202,16 +204,14 @@
                     android:scrollbars="none">
 
                     <ImageButton
-                        android:id="@+id/ibtnTym"
                         android:layout_width="wrap_content"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/heart"
+                        android:src="@drawable/notify"
                         android:contentDescription="Profile"
                         android:background="?android:attr/selectableItemBackground" />
 
                     <ImageButton
-                        android:id="@+id/ibtnComment"
                         android:layout_width="wrap_content"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -220,11 +220,10 @@
                         android:background="?android:attr/selectableItemBackground" />
 
                     <ImageButton
-                        android:id="@+id/ibtnShare"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/share"
+                        android:src="@drawable/notify"
                         android:contentDescription="Search"
                         android:background="?android:attr/selectableItemBackground" />
 
@@ -320,7 +319,7 @@
                         android:layout_width="wrap_content"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/heart"
+                        android:src="@drawable/notify"
                         android:contentDescription="Profile"
                         android:background="?android:attr/selectableItemBackground" />
 
@@ -336,7 +335,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:src="@drawable/share"
+                        android:src="@drawable/notify"
                         android:contentDescription="Search"
                         android:background="?android:attr/selectableItemBackground" />
 

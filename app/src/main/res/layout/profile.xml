@@ -509,7 +509,7 @@
                                     <ImageView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        app:srcCompat="@drawable/plus" />
+                                        app:srcCompat="@drawable/notify" />
                                 </androidx.cardview.widget.CardView>
                             </FrameLayout>
 

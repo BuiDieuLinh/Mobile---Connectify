@@ -1,4 +1,4 @@
-package com.example.btl_mobile.Adapter;
+package com.example.btl_mobile;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,10 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.btl_mobile.Data.User;
-import com.example.btl_mobile.R;
-
-import java.text.BreakIterator;
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {

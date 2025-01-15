@@ -202,7 +202,7 @@
                             android:id="@+id/ibtnTym1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/heart"></ImageButton>
+                            android:background="@drawable/notify"></ImageButton>
                         <TextView
                             android:id="@+id/tvCountTyms1"
                             android:layout_width="wrap_content"
@@ -241,7 +241,7 @@
                             android:id="@+id/ibtnShare1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/share"></ImageButton>
+                            android:background="@drawable/notify"></ImageButton>
                         <TextView
                             android:id="@+id/tvCountShares1"
                             android:layout_width="wrap_content"
@@ -358,7 +358,7 @@
                             android:id="@+id/ibtnTym"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/heart"></ImageButton>
+                            android:background="@drawable/notify"></ImageButton>
                         <TextView
                             android:id="@+id/tvCountTyms"
                             android:layout_width="wrap_content"
@@ -397,7 +397,7 @@
                             android:id="@+id/ibtnShare"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/share"></ImageButton>
+                            android:background="@drawable/notify"></ImageButton>
                         <TextView
                             android:id="@+id/tvCountShares"
                             android:layout_width="wrap_content"
