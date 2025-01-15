@@ -14,7 +14,7 @@
 
         <!-- MainActivity khai báo đúng -->
         <activity
-            android:name=".MainActivity"
+            android:name=".actTabControl"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,11 +23,16 @@
         </activity>
         <activity android:name=".actIndex" />
         <activity android:name=".actProfile"/>
-        <activity android:name=".actFollows"/>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".actNotification" />
         <activity android:name=".actManageUser"/>
         <activity android:name=".actManagerPost"/>
         <activity android:name=".actManage"/>
+        <activity android:name=".actFollows"/>
+        <activity android:name=".actTabProfile"/>
+        <activity android:name=".actEditProfile"/>
+        <activity android:name=".actSetting"/>
+        <activity android:name=".actMessage"/>
 
     </application>
 </manifest>

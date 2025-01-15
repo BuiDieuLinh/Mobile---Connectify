@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <!--  Header  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="10dp" android:paddingBottom="10dp" android:background="@color/white" android:gravity="center_vertical">
+        <ImageButton android:id="@+id/btnBackChat" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/arrow_left" android:contentDescription="Notify button" android:background="@android:color/transparent"/>
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+            <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="8dp" android:background="@drawable/border_gradient">
+                <androidx.cardview.widget.CardView android:layout_width="36dp" android:layout_height="36dp" android:layout_margin="2dp" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="18dp">
+                    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" app:srcCompat="@drawable/lvm"/>
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center_vertical">
+                <TextView android:id="@+id/tvName1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Leo Messi" android:textStyle="bold" android:textSize="16sp" android:textColor="@android:color/black"/>
+                <TextView android:id="@+id/tvAdd1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="leomessi.2004" android:textSize="14sp" android:textColor="@android:color/darker_gray"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageButton android:id="@+id/btnNotify" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/phone_flip" android:contentDescription="Notify button" android:background="@android:color/transparent"/>
+        <ImageButton android:id="@+id/btnChat" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/screen_play" android:contentDescription="Chat button" android:background="@android:color/transparent"/>
+    </LinearLayout>
+    <!--  Nội dung chính  -->
+    <ScrollView android:id="@+id/scrollContent" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:id="@+id/linearContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="5dp" android:background="@android:color/background_light">
+            <!--  Nội dung TextView  -->
+            <!--  Nội dung TextView  -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="10dp" android:paddingStart="10dp" android:paddingEnd="10dp" android:layout_marginBottom="10dp" android:background="@drawable/border_search" android:text="Xin chào anh Ly Van Minh"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="10dp" android:paddingStart="10dp" android:paddingEnd="10dp" android:layout_marginBottom="10dp" android:layout_gravity="end" android:background="@drawable/border_search" android:text="Xin chào anh Nguyen Van Liem"/>
+            <!--  Cần sử dụng code java để chỉnh kthc chứ k để cố định -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="10dp" android:paddingStart="10dp" android:paddingEnd="10dp" android:layout_marginBottom="10dp" android:background="@drawable/border_search" android:text="Nội dung quá dài sẽ tự động xuống dòng mà không bị cắt ngang ở phần cuối." android:singleLine="false" android:ellipsize="none" android:scrollHorizontally="false" android:maxWidth="280dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="10dp" android:paddingStart="10dp" android:paddingEnd="10dp" android:layout_marginBottom="10dp" android:layout_gravity="end" android:background="@drawable/border_search" android:text="Xin chào anh Nguyen Van Liem"/>
+            <!--  Cần sử dụng code java để chỉnh kthc chứ k để cố định -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="10dp" android:paddingStart="10dp" android:paddingEnd="10dp" android:layout_marginBottom="10dp" android:background="@drawable/border_search" android:text="đâu nó bảo cái minSDK đg ở 24 cần ở 28." android:singleLine="false" android:ellipsize="none" android:scrollHorizontally="false" android:maxWidth="280dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="10dp" android:paddingStart="10dp" android:paddingEnd="10dp" android:layout_marginBottom="10dp" android:layout_gravity="end" android:background="@drawable/border_search" android:text="tóm lại 3 máy phiên bản k đồng nhất"/>
+            <!--  Cần sử dụng code java để chỉnh kthc chứ k để cố định -->
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="10dp" android:paddingStart="10dp" android:paddingEnd="10dp" android:layout_marginBottom="10dp" android:background="@drawable/border_search" android:text="nãy mình cũng phải cài lại mấy cái mới chạy được" android:singleLine="false" android:ellipsize="none" android:scrollHorizontally="false" android:maxWidth="280dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="10dp" android:paddingStart="10dp" android:paddingEnd="10dp" android:layout_marginBottom="10dp" android:layout_gravity="end" android:background="@drawable/border_search" android:text="tóm lại 3 máy phiên bản k đồng nhất"/>
+        </LinearLayout>
+    </ScrollView>
+    <!--  TabMenu luôn cố định ở dưới cùng  -->
+    <LinearLayout android:id="@+id/tabMenu" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:color/white" android:gravity="center_vertical" android:paddingTop="5dp" android:paddingBottom="5dp" android:paddingStart="5dp" android:paddingEnd="5dp">
+        <ImageButton android:id="@+id/btnPlus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/newpost" android:contentDescription="Send button" android:background="@android:color/transparent"/>
+        <EditText android:id="@+id/edtMessage" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="8" android:hint="Nhập tin nhắn" android:background="@drawable/border_search" android:padding="10dp" android:inputType="text"/>
+        <ImageButton android:id="@+id/btnSendImg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/camera_viewfinder" android:contentDescription="Send button" android:background="@android:color/transparent"/>
+        <ImageButton android:id="@+id/btnSendMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:src="@drawable/share" android:contentDescription="Send button" android:background="@android:color/transparent"/>
+    </LinearLayout>
+</LinearLayout>
